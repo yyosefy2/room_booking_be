@@ -1,13 +1,19 @@
 {
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.0",
-    "express": "^4.18.2",
-    "express-rate-limit": "^6.11.2",
-    "ioredis": "^5.8.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^9.0.0",
-    "pg": "^8.8.0",
-    "uuid": "^9.0.1"
+  "name": "room-booking-microservices",
+  "version": "1.0.0",
+  "description": "Room booking system with microservices architecture",
+  "scripts": {
+    "docker:up": "docker compose --env-file .env.default up -d --build --force-recreate",
+    "docker:down": "docker compose down",
+    "docker:reset": "docker compose down -v",
+    "docker:logs": "docker compose logs -f",
+    "eslint": "eslint \"be_ms/**/*.js\"",
+    "eslint:fix": "eslint --fix \"be_ms/**/*.js\""
+
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0"
   }
 }
